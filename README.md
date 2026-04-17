@@ -1,11 +1,11 @@
-# 🍽️ RestaurantStock
+# RestaurantStock
 
 **Sistema de Gestión de Inventario para Restaurantes**  
 Proyecto de Feria EMI · 2026
 
 ---
 
-## 🧱 Stack Tecnológico
+## Stack Tecnológico
 
 | Capa | Tecnología |
 |---|---|
@@ -17,7 +17,7 @@ Proyecto de Feria EMI · 2026
 
 ---
 
-## 📋 Requisitos Previos
+## Requisitos Previos
 
 Antes de levantar el proyecto, asegurarse de tener instalado:
 
@@ -34,16 +34,16 @@ Antes de levantar el proyecto, asegurarse de tener instalado:
 
 ---
 
-## 🚀 Levantar el Proyecto (Paso a Paso)
+## Levantar el Proyecto (Paso a Paso)
 
-### 1️⃣ Clonar el repositorio
+### 1 Clonar el repositorio
 
 ```bash
 git clone <URL_DEL_REPOSITORIO>
 cd Proyecto_EMI
 ```
 
-### 2️⃣ Configurar variables de entorno
+### 2️ Configurar variables de entorno
 
 ```bash
 # Copiar el archivo de ejemplo
@@ -52,7 +52,7 @@ cp .env.example .env
 
 > El archivo `.env` ya viene con valores por defecto que funcionan localmente. No hace falta cambiar nada para desarrollo.
 
-### 3️⃣ Levantar la Base de Datos (Docker)
+### 3️ Levantar la Base de Datos (Docker)
 
 ```bash
 docker compose up -d
@@ -60,9 +60,9 @@ docker compose up -d
 
 Este comando hace **tres cosas automáticamente**:
 
-1. 🐘 Levanta **PostgreSQL 16** en el puerto `5432`
-2. 🖥️ Levanta **pgAdmin** (gestor visual de BD) en el puerto `5050`
-3. 📋 Ejecuta `schema.sql` y **crea todas las tablas** con sus relaciones
+1.  Levanta **PostgreSQL 16** en el puerto `5432`
+2.  Levanta **pgAdmin** (gestor visual de BD) en el puerto `5050`
+3.  Ejecuta `schema.sql` y **crea todas las tablas** con sus relaciones
 
 Verificar que los contenedores estén corriendo:
 ```bash
@@ -70,9 +70,9 @@ docker ps
 ```
 Deberías ver `emi_postgres` y `emi_pgadmin` con estado `Up`.
 
-> ⚠️ **La base de datos debe estar corriendo ANTES de iniciar el backend.**
+>  **La base de datos debe estar corriendo ANTES de iniciar el backend.**
 
-### 4️⃣ Instalar dependencias e iniciar el Backend
+### 4️ Instalar dependencias e iniciar el Backend
 
 ```bash
 cd backend
@@ -83,11 +83,11 @@ npm run dev
 El servidor arranca en: **`http://localhost:3000`**  
 Si la conexión a PostgreSQL es exitosa, verás en consola:
 ```
-✅ PostgreSQL conectado – 2025-04-17T...
-🚀 Servidor corriendo en http://localhost:3000
+ PostgreSQL conectado – 2025-04-17T...
+ Servidor corriendo en http://localhost:3000
 ```
 
-### 5️⃣ Instalar dependencias e iniciar el Frontend
+### 5⃣ Instalar dependencias e iniciar el Frontend
 
 En una **nueva terminal**:
 
@@ -101,7 +101,7 @@ La app React abre en: **`http://localhost:5173`**
 
 ---
 
-## 🌐 URLs de Acceso
+##  URLs de Acceso
 
 | Servicio | URL | Descripción |
 |---|---|---|
@@ -125,7 +125,7 @@ Para conectar pgAdmin al servidor de PostgreSQL la primera vez:
 
 ---
 
-## 🗄️ Base de Datos
+##  Base de Datos
 
 La base de datos se crea **automáticamente** al levantar Docker por primera vez gracias al archivo `schema.sql`.
 
@@ -158,13 +158,13 @@ docker compose stop
 # Detener Y eliminar contenedores (sin borrar datos del volumen)
 docker compose down
 
-# ⚠️  Eliminar TODO incluyendo la base de datos (usar con cuidado)
+#   Eliminar TODO incluyendo la base de datos (usar con cuidado)
 docker compose down -v
 ```
 
 ---
 
-## 🧪 Probar la API con Bruno
+##  Probar la API con Bruno
 
 El repositorio incluye una colección completa de Bruno lista para usar.
 
@@ -178,14 +178,14 @@ El repositorio incluye una colección completa de Bruno lista para usar.
 ### Endpoints disponibles en la colección
 
 ```
-📁 health/
+ health/
    └── Health Check                    GET  /api/health
 
-📁 users/
+ users/
    ├── Get All Users                   GET  /api/users
    └── Create User                     POST /api/users
 
-📁 products/
+ products/
    ├── Get All Products                GET  /api/products
    ├── Get Product by ID               GET  /api/products/:id
    ├── Create Product (Contable)       POST /api/products
@@ -193,29 +193,29 @@ El repositorio incluye una colección completa de Bruno lista para usar.
    ├── Update Product                  PUT  /api/products/:id
    └── Deactivate Product              DELETE /api/products/:id
 
-📁 inventory/
+ inventory/
    ├── Get All Movements               GET  /api/inventory/movements
    ├── Register Entry                  POST /api/inventory/movements
    ├── Register Exit Manual            POST /api/inventory/movements
    ├── Get Stock by Product            GET  /api/inventory/stock/:productId
    └── Record Daily Stock              POST /api/inventory/daily-stock
 
-📁 sales/
+ sales/
    ├── Get All Sales                   GET  /api/sales
    ├── Get Sale by ID                  GET  /api/sales/:id
    └── Create Sale                     POST /api/sales
 
-📁 alerts/
+ alerts/
    ├── Get Active Alerts               GET  /api/alerts
    └── Resolve Alert                   PATCH /api/alerts/:id/resolve
 ```
 
-> 📖 Para entender qué hace cada endpoint en detalle, consultar:  
+>  Para entender qué hace cada endpoint en detalle, consultar:  
 > **`backend/API_MANUAL.md`** — manual completo para el equipo de frontend.
 
 ---
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 Proyecto_EMI/
@@ -226,11 +226,11 @@ Proyecto_EMI/
 ├── .gitignore
 │
 ├── backend/
-│   ├── API_MANUAL.md         ← 📖 Manual de API para el frontend
+│   ├── API_MANUAL.md         ←  Manual de API para el frontend
 │   ├── package.json
 │   ├── tsconfig.json
 │   ├── .env                  ← Variables del backend (copia del raíz)
-│   ├── bruno/                ← 🧪 Colección de Bruno (abrir desde Bruno)
+│   ├── bruno/                ←  Colección de Bruno (abrir desde Bruno)
 │   └── src/
 │       ├── index.ts          ← Entry point del servidor
 │       ├── config/db.ts      ← Conexión a PostgreSQL
@@ -265,7 +265,7 @@ npm install && npm run dev
 
 ---
 
-## 🤝 Flujo de Trabajo en Equipo
+##  Flujo de Trabajo en Equipo
 
 - El **backend** expone la API en `http://localhost:3000/api`
 - El **frontend** tiene configurado un proxy automático: cualquier llamada a `/api/...` se redirige al backend. No es necesario escribir la URL completa en fetch, solo `/api/...`
@@ -274,4 +274,4 @@ npm install && npm run dev
 
 ---
 
-> 💬 Cualquier duda sobre los endpoints: revisar `backend/API_MANUAL.md`
+>  Cualquier duda sobre los endpoints: revisar `backend/API_MANUAL.md`
