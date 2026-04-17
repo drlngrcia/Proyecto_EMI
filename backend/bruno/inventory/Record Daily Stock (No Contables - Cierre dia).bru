@@ -1,0 +1,21 @@
+meta {
+  name: Record Daily Stock (No Contables - Cierre dia)
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/inventory/daily-stock
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "product_id": "REEMPLAZA-CON-UUID-PRODUCTO-NO-CONTABLE",
+    "recorded_date": "2025-04-17",
+    "quantity_start": 2.5,
+    "quantity_end": 0.75,
+    "notes": "Cierre martes - visualmente queda 3/4 kg"
+  }
+}

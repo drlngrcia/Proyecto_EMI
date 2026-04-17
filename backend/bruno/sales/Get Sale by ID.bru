@@ -1,0 +1,15 @@
+meta {
+  name: Get Sale by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/sales/{{saleId}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  saleId: REEMPLAZA-CON-UUID-VENTA
+}

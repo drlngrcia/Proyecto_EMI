@@ -1,0 +1,21 @@
+meta {
+  name: Create Product (Contable)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Lata de Atún",
+    "category": "Enlatados",
+    "unit": "unidad",
+    "min_quantity": 5,
+    "product_type": "countable"
+  }
+}

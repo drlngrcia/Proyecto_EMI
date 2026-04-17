@@ -1,0 +1,15 @@
+meta {
+  name: Get Stock by Product
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/inventory/stock/{{productId}}
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  productId: REEMPLAZA-CON-UUID-PRODUCTO
+}

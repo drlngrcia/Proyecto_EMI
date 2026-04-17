@@ -1,0 +1,29 @@
+meta {
+  name: Create Sale (descuenta inventario automaticamente)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/sales
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "external_ref": "TICKET-2025-001",
+    "items": [
+      {
+        "product_id": "REEMPLAZA-CON-UUID-PRODUCTO-1",
+        "quantity": 3,
+        "unit_price": 5.50
+      },
+      {
+        "product_id": "REEMPLAZA-CON-UUID-PRODUCTO-2",
+        "quantity": 1,
+        "unit_price": 12.00
+      }
+    ]
+  }
+}

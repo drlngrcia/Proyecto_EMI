@@ -1,0 +1,13 @@
+# node_modules y build
+node_modules/
+dist/
+
+# Variables de entorno
+.env
+*.env.local
+
+# Logs
+*.log
+
+# TypeScript
+*.tsbuildinfo

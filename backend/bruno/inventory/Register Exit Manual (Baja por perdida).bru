@@ -1,0 +1,20 @@
+meta {
+  name: Register Exit Manual (Baja por perdida)
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/inventory/movements
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "product_id": "REEMPLAZA-CON-UUID-PRODUCTO",
+    "movement_type": "exit_manual",
+    "quantity": 2,
+    "notes": "Producto vencido / rotura"
+  }
+}

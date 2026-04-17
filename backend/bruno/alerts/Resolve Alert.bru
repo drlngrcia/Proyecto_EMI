@@ -1,0 +1,15 @@
+meta {
+  name: Resolve Alert
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/api/alerts/{{alertId}}/resolve
+  body: none
+  auth: none
+}
+
+vars:pre-request {
+  alertId: REEMPLAZA-CON-UUID-ALERTA
+}

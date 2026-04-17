@@ -1,0 +1,21 @@
+meta {
+  name: Create Product (No Contable)
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Queso Cheddar",
+    "category": "Lácteos",
+    "unit": "kg",
+    "min_quantity": 0.5,
+    "product_type": "non_countable"
+  }
+}

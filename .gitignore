@@ -1,0 +1,30 @@
+# ============================================================
+# .gitignore – Proyecto EMI
+# ============================================================
+
+# Variables de entorno
+.env
+*.env.local
+
+# Node
+node_modules/
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+pgadmin_data/
